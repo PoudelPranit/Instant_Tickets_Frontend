@@ -214,7 +214,7 @@ $(document).ready(function () {
 		}
 
 		// Refresh the list view (needed for jQuery Mobile styling)
-		$eventList.listview('refresh');
+		$eventListHome.listview('refresh');
 
 		// Add event listeners to the "Book Now" buttons
 		$('.book-now-btn').on('click', function () {
