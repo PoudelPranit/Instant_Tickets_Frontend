@@ -1,5 +1,6 @@
 //server base domain url 
-const domainUrl = "http://localhost:4000/instanttickets";  // if local test, pls use this 
+//const domainUrl = "http://localhost:4000/instanttickets";  // if local test, pls use this 
+const domainUrl = "https://instant-tickets-backend.onrender.com/instanttickets";
 
 var debug = true;
 var authenticated = false;
