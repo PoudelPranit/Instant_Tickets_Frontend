@@ -648,7 +648,7 @@ $(document).ready(function () {
 			success: function (response) {
 				if (response.message === "success") {
 					alert("Event created successfully!");
-					$.mobile.changePage("#");  // Redirect to homepage after successful event creation
+					$.mobile.changePage("#manageEventPage");  // Redirect to homepage after successful event creation
 				} else {
 					alert("Failed to create event: " + response.message);  // Show failure message from the server
 				}
