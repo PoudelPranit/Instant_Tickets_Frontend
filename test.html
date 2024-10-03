@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instant Tickets - Login</title>
+    <link rel="stylesheet" href="themes/myTheme.css" />
+    <link rel="stylesheet" href="./js/jquery.mobile-1.4.5.css" />
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.mobile-1.4.5.js"></script>
+</head>
+
+<body>
+    <!-- Login Page -->
+    <div data-role="page" id="loginPage">
+        <div data-role="header" data-theme="d" data-position="fixed">
+            <h1>Instant Tickets</h1>
+        </div>
+        <div data-role="content">
+            <div class="wrap login">
+                <!-- App banner or logo -->
+                <div><img src="img/banner.png" alt="Instant Tickets" style="width:100%;" /></div>
+                
+                <!-- Login Form -->
+                <form id="loginForm" method="post" action="login_action.php">
+                    <div>
+                        <input type="email" name="email" placeholder="Enter your Email" required />
+                    </div>
+                    <div>
+                        <input type="password" name="password" placeholder="Enter the Password" required />
+                    </div>
+                    <div>
+                        <button type="submit" class="ui-btn ui-shadow ui-corner-all ui-btn-d">Login</button>
+                    </div>
+                    <div>
+                        <a href="#signUpPage" class="ui-btn ui-shadow ui-corner-all ui-btn-d">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </div>    
+        <div data-role="footer" data-theme="d" data-position="fixed" style="text-align:center;">
+            <p>&copy; 2024 Instant Tickets</p>
+        </div>
+    </div>
+</body>
+
+</html>
