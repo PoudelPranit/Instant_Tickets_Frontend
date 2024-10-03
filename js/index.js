@@ -186,15 +186,15 @@ $(document).ready(function () {
 
 	// Function to dynamically populate the event list with event details
 	function populateEventList(events) {
-		var $eventList = $('#eventList'); // Target the event list UL
-		$eventList.empty(); // Clear any existing list items
+		var $eventListHome = $('#eventListHome'); // Target the event list UL
+		$eventListHome.empty(); // Clear any existing list items
 
 		if (events.length === 0) {
-			$eventList.append('<li>No events found.</li>');
+			$eventListHome.append('<li>No events found.</li>');
 		} else {
 			events.forEach(function (event) {
 				var listItem = `
-					<li >
+					<li style="background-color: white; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px;">
 						<h3>Performer: ${event.performer}</h3>
 						<p>Venue: ${event.venue}</p>
 						<p>Date: ${event.date}</p>
@@ -209,7 +209,7 @@ $(document).ready(function () {
 					</div>
 
 				`;
-				$eventList.append(listItem); // Append each event to the list
+				$eventListHome.append(listItem); // Append each event to the list
 			});
 		}
 
@@ -674,7 +674,7 @@ $(document).ready(function () {
 		$.get(domainUrl + "/viewallevent", function (data, status) {
 			if (status === "success") {
 				console.log(data); // Log the full response to ensure it's received correctly
-				populateEventList(data.allEvent);  // Access the nested allEvent array and pass it to the function
+				populateEventListAdmin(data.allEvent);  // Access the nested allEvent array and pass it to the function
 			} else {
 				alert("Error retrieving events. Please try again.");
 			}
@@ -684,13 +684,13 @@ $(document).ready(function () {
 		});
 	});
 	
-	function populateEventList(events) {
-		var $eventList = $('#eventListAdmin'); // Target the event list UL
-		$eventList.empty(); // Clear any existing list items
+	function populateEventListAdmin(events) {
+		var $eventListAdmin = $('#eventListAdmin'); // Target the event list UL
+		$eventListAdmin.empty(); // Clear any existing list items
 	
 		if (events.length === 0) {
 			//alert("here no event");
-			$eventList.append('<li >No events found.</li>');
+			$eventListAdmin.append('<li >No events found.</li>');
 		} else {
 			//alert("here  event");
 			events.forEach(function (event) {
@@ -709,7 +709,7 @@ $(document).ready(function () {
 						</a>
 					</li>
 				`;
-				$eventList.append(listItem); // Append each event to the list
+				$eventListAdmin.append(listItem); // Append each event to the list
 			});
 		}
 	

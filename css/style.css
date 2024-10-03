@@ -1,7 +1,8 @@
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,a{margin:0;padding:0;outline:none;}
 
 body{
-  font-family: Helvetica, Tahoma, Arial; 
+  font-family: Helvetica, Tahoma, Arial;
+  background-color: whitesmoke; 
 }
 input::-webkit-input-placeholder{
 	color:#e1e1e1;
@@ -53,4 +54,14 @@ form div{margin-top:20px;position:relative}
 
 label {
 	color: white;
+}
+
+#eventListHome {
+    background-color: white; /* Make sure the list has a white background */
+    color: black; /* Ensure the text color contrasts with the background */
+}
+
+#eventListAdmin {
+    background-color: white; /* Make sure the list has a white background */
+    color: black; /* Ensure the text color contrasts with the background */
 }
